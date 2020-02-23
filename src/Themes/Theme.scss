@@ -1,0 +1,73 @@
+.FirstSection {
+  margin-top: 70px;
+}
+
+.Section {
+  height: 400px;
+  width: 100%;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  overflow-x: scroll;
+
+  .SectionHeader {
+    height: 100px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    h3 {
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+  }
+
+  .SectionCards {
+    flex: 1;
+    display: -moz-inline-box;
+    display: -webkit-inline-box;
+    display: -ms-inline-box;
+    flex-wrap: nowrap;
+    overflow: auto;
+
+    .SectionCard {
+      height: 275px;
+      width: 250px;
+      margin: 0 20px;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .RuleName {
+        h3 {
+          font-weight: 400;
+        }
+      }
+
+      .EditWrapper {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+      }
+
+      .DeleteWrapper {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        cursor: pointer;
+
+        i {
+          color: #c0392b;
+        }
+      }
+    }
+
+    .SectionCard:last-child {
+      margin-right: 100px;
+    }
+  }
+}

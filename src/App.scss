@@ -1,0 +1,344 @@
+.App {
+  text-align: center;
+
+  .Navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background: #aa4b6b; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #3b8d99,
+      #6b6b83,
+      #aa4b6b
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #3b8d99,
+      #6b6b83,
+      #aa4b6b
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    display: flex;
+    align-items: center;
+    z-index: 1;
+
+    .AddProp,
+    .DownloadBtn {
+      margin-left: 20px;
+      button {
+        padding: 5px 15px;
+        width: auto;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        border: 2px solid #fff;
+        border-radius: 25px;
+        color: #fff;
+
+        i {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .DownloadBtn {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    .AppNameWrapper {
+      flex: 1;
+      margin-left: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      .AppName {
+        color: #fff;
+        font-weight: lighter;
+      }
+    }
+  }
+}
+
+.shadow-xl {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+input[type="color"] {
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: none;
+  width: 50px;
+  height: 50px;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+  border-radius: 30px;
+}
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 10px;
+}
+
+.Modal {
+  z-index: 15;
+  position: fixed;
+  margin: auto;
+  min-height: 300px;
+  height: auto;
+  max-height: 450px;
+  max-width: 500px;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+
+  .Header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+  }
+
+  .Content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .PropName {
+      width: 90%;
+      .PropNameInput {
+        width: 100%;
+        outline: none;
+        height: 40px;
+        font-size: 16px;
+        border: none;
+        border-bottom: 2px solid #ccc;
+      }
+    }
+
+    .ThemeColors {
+      height: 70px;
+      width: 90%;
+      margin-top: 15px;
+      display: inline-flex;
+      align-items: center;
+
+      .ThemeName {
+        flex: 1;
+      }
+
+      .ThemeColorValue {
+        margin-right: 10px;
+        input {
+          width: 125px;
+          outline: none;
+          height: 30px;
+          font-size: 13px;
+          border: none;
+          background-color: transparent;
+          border-bottom: 2px solid #ccc;
+        }
+      }
+    }
+
+    .AddThemeBtnWrapper,
+    .EditThemeBtnWrapper {
+      margin-top: 15px;
+      height: 55px;
+      width: 90%;
+      display: flex;
+      button {
+        flex: 1;
+        border-radius: 15px;
+        font-size: 16px;
+        background-color: #2ecc71;
+        color: #fff;
+        outline: none;
+        border: none;
+        opacity: 1;
+
+        &:active {
+          opacity: 0.7;
+        }
+      }
+    }
+
+    .DownloadAsCSS,
+    .DownloadAsJSON {
+      flex: 1;
+      width: 95%;
+      display: flex;
+      margin-bottom: 20px;
+
+      button {
+        flex: 1;
+        width: 100%;
+        font-size: 24px;
+        font-weight: 200;
+        outline: none;
+        border: none;
+        border-radius: 20px;
+        color: #fff;
+        background: #36d1dc; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+          to right,
+          #5b86e5,
+          #36d1dc
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+          to right,
+          #5b86e5,
+          #36d1dc
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        &:active {
+          opacity: 0.7;
+        }
+      }
+    }
+
+    .DownloadAsJSON {
+      button {
+        background: #ff8008; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+          to right,
+          #ffc837,
+          #ff8008
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+          to right,
+          #ffc837,
+          #ff8008
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+    }
+  }
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+}
+
+.ModalOverlay {
+  background-color: rgba($color: #333, $alpha: 0.7);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 11;
+}
+
+.Thin-Text {
+  font-weight: 300;
+}
+
+.scale-up-center {
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .Modal {
+    width: 350px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .Modal {
+    width: 300px;
+  }
+}
+
+/* Reset Select */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  border-radius: 30px;
+  background: transparent;
+  background-image: none;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select */
+.SelectRule {
+  position: relative;
+  display: flex;
+  width: 90%;
+  height: 3em;
+  line-height: 3;
+  border: 2px solid #ccc;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+select {
+  flex: 1;
+  padding: 0 1em;
+  color: #222;
+  font-size: 16px;
+  cursor: pointer;
+}
+/* Arrow */
+.SelectRule::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: transparent;
+  cursor: pointer;
+  color: #ccc;
+  pointer-events: none;
+  -webkit-transition: 0.25s all ease;
+  -o-transition: 0.25s all ease;
+  transition: 0.25s all ease;
+}
+/* Transition */
+.select:hover::after {
+  color: #3489db;
+}
